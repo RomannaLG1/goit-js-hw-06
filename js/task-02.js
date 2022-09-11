@@ -39,18 +39,18 @@ ingredientsEl.append(...elements);
 
 // ----------------------FOR EACH------------------------
 
-// const ingredientItem = [];
+const ingredientItem = [];
 
-// ingredients.forEach(function (ingredient, idx) {
-//   // console.log(ingredient);
-//   const option = ingredients[idx];
+ingredients.forEach(function (ingredient, idx) {
+  // console.log(ingredient);
+  const option = ingredients[idx];
 
-// ingredientItem.push(addItemIngredients);
-// })
+ingredientItem.push(addItemIngredients);
+})
 
-// console.log(ingredientItem);
+console.log(ingredientItem);
 
-// const ingredientsEl = document.querySelector
-// ('#ingredients');
+const ingredientsEl = document.querySelector
+('#ingredients');
 
-// ingredientsEl.append(...ingredientItem);
+ingredientsEl.append(...ingredientItem);

@@ -5,11 +5,14 @@
     <span id="text">Abracadabra!</span> */
 
     const getInputEl = document.querySelector('input');
-    console.log(getInputEl);
-    const defaultVal = getInputEl.defaultVal;
-    const minValue = 16;
-    const currentValue = getInputEl.minValue;
-    console.log(currentValue);
-    console.log(defaultVal);
+    const getSpanEl= document.querySelector('span');
+
+ getInputEl.addEventListener('change', () => {
+    const getSizeEl = getInputEl.value;
+     console.log(getSizeEl);
+     getSpanEl.style.fontSize =`${getSizeEl}px`;
+ });
+
+
 
     
