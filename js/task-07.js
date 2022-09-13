@@ -4,15 +4,13 @@
     <br />
     <span id="text">Abracadabra!</span> */
 
-    const getInputEl = document.querySelector('input');
-    const getSpanEl= document.querySelector('span');
+const getInputEl = document.querySelector("input");
+const getSpanEl = document.querySelector("span");
 
- getInputEl.addEventListener('change', () => {
-    const getSizeEl = getInputEl.value;
-     console.log(getSizeEl);
-     getSpanEl.style.fontSize =`${getSizeEl}px`;
- });
+getSpanEl.style.fontSize = `${getInputEl.value}px`;
 
-
-
-    
+getInputEl.addEventListener("change", () => {
+  const getSizeEl = getInputEl.value;
+  console.log(getSizeEl);
+  getSpanEl.style.fontSize = `${getSizeEl}px`;
+});

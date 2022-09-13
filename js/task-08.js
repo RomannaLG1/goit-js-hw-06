@@ -5,13 +5,15 @@ form.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   const {
-    elements: { email, password }
+    elements: { email, password },
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
     return alert("Dear Catherine, please fill in all the fields!");
   }
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const massegeInfo = { email: email.value, password: password.value };
+
+  console.log(massegeInfo);
   event.currentTarget.reset();
 }

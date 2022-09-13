@@ -18,34 +18,40 @@ const getDestroyEl = document.querySelector("[data-destroy]");
 const getBoxesEl = document.querySelector("#boxes");
 
 getCreateEl.addEventListener("click", inputValue);
-getDestroyEl.addEventListener("click", reset);
+// getDestroyEl.addEventListener("click", reset);
 
 
 function inputValue() {
   const getInputValue = Number(getInputEl.value);
-  createBoxes(getInputValue);
+  // createBoxes(getInputValue);
+  creatArrayValue(getInputValue);
 }
 
-function createBoxes(amount) {
-  const arrValue = [];
-  for (let i = 0; i <= amount; i++) {
-    arrValue.push(i);
-  }
-  console.log(arrValue);
-  arrValue.forEach((element, idx) => {
-    const elementWidth = 10 * idx;
-    const elementHeight = 10 * idx;
-    element = `<div class="chip" style="
-  background-color: ${getRandomHexColor()}; 
-  width: ${elementWidth}px; 
-  height: ${elementHeight}px;
-  margin-top: 5px;
-  ">
-  </div>`;
-
-    getBoxesEl.insertAdjacentHTML("afterbegin", element);
-  });
+function creatArrayValue(amount) {
+  const arrayValue = [...Array(amount)].map((item, index) => index);
+  console.log(arrayValue);
 }
+
+// function createBoxes(amount) {
+//   const arrValue = [];
+//   for (let i = 0; i <= amount; i++) {
+//     arrValue.push(i);
+//   }
+//   console.log(arrValue);
+//   arrValue.forEach((element, idx) => {
+//     const elementWidth = 10 * idx;
+//     const elementHeight = 10 * idx;
+//     element = `<div class="chip" style="
+//   background-color: ${getRandomHexColor()}; 
+//   width: ${elementWidth}px; 
+//   height: ${elementHeight}px;
+//   margin-top: 5px;
+//   ">
+//   </div>`;
+
+//     getBoxesEl.insertAdjacentHTML("afterbegin", element);
+//   });
+// }
 
 function reset() {
   const divs = document.querySelectorAll(".chip");
